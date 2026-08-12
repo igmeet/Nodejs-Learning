@@ -30,7 +30,7 @@
 
 
 
-// Tricky Interview Question 
+//* Tricky Interview Question 
 // in our program we have global objects and these are console.log, setTimeout, setInterval, etc...
 // so question is --> yeh joh module, exports, require wgera hai woh bhi global objects hai ?
 

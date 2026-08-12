@@ -1,3 +1,12 @@
+// step 1
+
+// > 1. http module - day - 2 index.js
+// > 2. global objects - main.js
+// > 3. module function executer - main.js
+// > 4. how node js works let see its advance version... (google.com)
+
+
+
 // creating http server 
 const http = require("http");
 const PORT = 8080;
