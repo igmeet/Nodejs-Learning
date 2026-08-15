@@ -38,14 +38,27 @@
 // why 
 
 // here concept of The module function executer comes
-// the module function wrapper / module function executer
+// the module wrapper function / CommomJS module wrapper
 // Before a modules code is executed, Node js will wrap it with a function wrapper that looks like this following ;
 
 // (function(exports, require, module, __filename, __dirname) {
 //     // Module code actually lives in here.
 // });
 
-
+// Node.js
+// │
+// ├── Global APIs
+// │   ├── console
+// │   ├── setTimeout
+// │   └── setInterval
+// │
+// └── CommonJS module system
+//     │
+//     └── Module Wrapper
+//         ├── exports
+//         ├── require
+//         ├── module
+//         ├── __filename
 
 
 
@@ -119,6 +132,7 @@
 
 // Hello from 0
 // Hello from timeout 1
+
 
 
 
