@@ -1,33 +1,68 @@
-// 2. Events in nodejs
-const EventEmitter = require("events"); // ?
-
-const emitter = new EventEmitter(); // new ??
-
-
-
-// emitter.on("GREET", ()=>{
-//     console.log("Hello from events")
-// })
-
-// emitter.on("GREET", (username, id)=>{
-//     console.log(`Hello World ${username} and id is ${id}`);
-// })
+//? object
+// const user = {
+//     name : "MEET",
+//     isAdmin : true
+// };
 
 
-// emitter.emit("GREET", "Meet", "1");
 
-// above is not right way to take an argument
+//? constructor = special method for defining the properties and methods of objects
+// constructor is start with  capital
+// function Car(model, year, fuel, engine) {
+//     this.model = model,
+//     this.year = year,
+//     this.fuel = fuel,
+//     this.engine = engine,
+//     this.drive = `you will drive ${this.model}`
+// }
 
-// why args.username
-// why (args)
+
+//? object ka instance 
+// passing argument in order
+// const car1 = new Car("BMW", "2026", "Electric", "High-end");
+
+// console.log(car1.model);
+// console.log(car1.year);
+// console.log(car1.fuel);
+// console.log(car1.engine);
+// console.log(car1.drive);
 
 
+
+
+
+// Events in node js
+// something happend for eg : button click -> something happend -> server
+
+const EventEmitter = require("events");
+
+// instance of obj
+const emitter = new EventEmitter();
+
+
+
+// register an event
+// params(eventName, callback function)
+// emitter.on("GREET", ()=> {
+//     console.log("Hello World");
+// });
+
+// it listen the event 
+// emitter.emit("GREET");
+
+
+
+
+// now let passs with args.
 emitter.on("GREET", (args)=> {
-    console.log(`Hello this is ${args.username} and id is : ${args.id}`);
-}) // yaha backtick me object literal kyu why not in ""
-
+    console.log(`Hello, Myself ${args.username} and my id is : ${args.id}`)
+});
 
 emitter.emit("GREET", {
-    username : "Meet",
-    id : "12sdniaedofn57osnsodgdsfnaod24"
-})
+    username : "MEET",
+    id : "2414nk3nnkknf12mon"
+});
+
+
+
+
