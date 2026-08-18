@@ -33,7 +33,7 @@ let LogFile = "eventlog.json";
 
 if(fs.existsSync(LogFile)){
     const data = fs.readFileSync(LogFile, "utf-8");
-    // LogFile me joh data hai ussi ko parse kara ke LogFile me wapis likh rhe hai
+    // eventCounter - target obj and type to copy that data to eventCounter so data - Source obj.
     Object.assign(eventCounter, JSON.parse(data));
 }
 
